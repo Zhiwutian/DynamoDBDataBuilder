@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "argon2": "^0.40.1",
+    "aws-sdk": "^2.1691.0",
+    "csvtojson": "^2.0.10",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "jsonwebtoken": "^9.0.0",

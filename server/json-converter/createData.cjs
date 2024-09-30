@@ -1,5 +1,7 @@
 const AWS = require('aws-sdk');
 const fs = require("fs");
+const csv = require('csv-to-json');
+
 
 process.env.AWS_SDK_LOAD_CONFIG = 1;
 
@@ -9,12 +11,12 @@ process.env.AWS_SDK_LOAD_CONFIG = 1;
 
 let s3 = new AWS.S3();
 
-const fileToUpload = fs.readFileSync('./files/hma-dealer-master.zip');
+const fileToUpload = fs.readFileSync('./files/hma-dealer-master.csv');
 
 
 let UploadParams = {
   Bucket: "brett-sbs-database-bucket-test",
-  Key: "hma-dealer-master.zip",
+  Key: "hma-dealer-master.csv",
   Body: fileToUpload
 }
 
